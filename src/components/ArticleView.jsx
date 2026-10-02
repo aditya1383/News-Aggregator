@@ -18,7 +18,7 @@ function ArticleView() {
 
     const fetchMissingArticle = async() => {
       try {
-        const res = await fetch(`https://gnews.io/api/v4/top-headlines?category=${category}&lang=${lang}&apikey=${API_KEY}`);
+        const res = await fetch(`/api/gnews/top-headlines?category=${category}&lang=${lang}&apikey=${API_KEY}`);
         const data = await res.json();
 
         const decodedTitle = decodeURIComponent(title);
