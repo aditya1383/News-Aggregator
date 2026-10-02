@@ -13,7 +13,7 @@ function NewsFeed() {
   useEffect(() => {
     const fetchNews = async () => {
       setLoading(true);
-      const res = await fetch(`https://gnews.io/api/v4/top-headlines?category=${category}&lang=${lang}&apikey=${API_KEY}`);
+      const res = await fetch(`/api/gnews/top-headlines?category=${category}&lang=${lang}&apikey=${API_KEY};`);
       const data = await res.json();
 
       setArticles(data.articles || []);
